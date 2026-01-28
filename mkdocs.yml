@@ -10,5 +10,6 @@ nav:
       - Core: client/Libraries/Core.md
       - Hooks: client/Libraries/Hooks.md
       - CharacterManager: client/Libraries/CharacterManager.md
+      - UI: client/Libraries/UI.md
       
 theme: readthedocs
