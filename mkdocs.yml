@@ -6,10 +6,13 @@ nav:
     - Index: client/index.md
     - Classes: 
       - Character: client/Classes/Character.md
+      - VehicleRequest: client/Classes/VehicleRequest.md
     - Libraries:
       - Core: client/Libraries/Core.md
       - Hooks: client/Libraries/Hooks.md
       - CharacterManager: client/Libraries/CharacterManager.md
+      - VehicleManager: client/Libraries/VehicleManager.md
       - UI: client/Libraries/UI.md
+      - Input: client/Libraries/Input.md
       
 theme: readthedocs
