@@ -5,6 +5,6 @@ nav:
   - Client: 
     - Index: client/index.md
     - Classes: 
-      -Character: client/Classes/Character.md
+      - Character: client/Classes/Character.md
       
 theme: readthedocs
