@@ -1,0 +1,5 @@
+site_name: DPLMP Lua Reference
+nav:
+  - Home: index.md
+  - Client API: client/index.md
+theme: readthedocs
