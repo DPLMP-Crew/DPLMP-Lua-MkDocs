@@ -12,4 +12,4 @@ Retrieves the current spawned state of the vehicle.
 #### Returns
 
 `state`
-: (number) Possible values are `VehicleManager.Processing`, `VehicleManager.Failed`, or `VehicleManager.Spawned`.
+: (number) For possible values, see [Vehicle Spawn States](../Libraries/VehicleManager/#vehicle-spawn-states)
