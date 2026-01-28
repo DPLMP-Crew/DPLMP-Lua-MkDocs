@@ -12,4 +12,4 @@ Retrieves the current spawned state of the vehicle.
 #### Returns
 
 `state`
-: (number) For possible values, see [Vehicle Spawn States](../Libraries/VehicleManager.md)
+: (number) For possible values, see [Vehicle Spawn States](../Libraries/VehicleManager.md/#vehicle-spawn-states)
