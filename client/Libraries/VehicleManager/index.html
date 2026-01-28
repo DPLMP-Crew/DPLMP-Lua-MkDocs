@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>VehicleManager - DPLMP Reference</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "VehicleManager";
+        var mkdocs_page_input_path = "client/Libraries/VehicleManager.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> DPLMP Reference
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Client Lua API</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../">Index</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Classes</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Classes/Character/">Character</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Classes/VehicleRequest/">VehicleRequest</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Libraries</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../Core/">Core</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Hooks/">Hooks</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../CharacterManager/">CharacterManager</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">VehicleManager</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#methods">Methods</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#vehiclemanagercreatevehiclemodel-x-y-z-angle-snaptoground">VehicleManager.CreateVehicle(model, x, y, z, angle, snapToGround)</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#vehiclemanagerdestroyvehiclevehiclerequest">VehicleManager.DestroyVehicle(vehicleRequest)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#vehicle-spawn-states">Vehicle Spawn States</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#vehiclemanagerprocessing">VehicleManager.Processing</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#vehiclemanagerfailed">VehicleManager.Failed</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#vehiclemanagerspawned">VehicleManager.Spawned</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../UI/">UI</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Input/">Input</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">DPLMP Reference</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Client Lua API</li>
+          <li class="breadcrumb-item">Libraries</li>
+      <li class="breadcrumb-item active">VehicleManager</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="vehiclemanager">VehicleManager</h1>
+<p>The <code>VehicleManager</code> library deals with the spawning and despawning of vehicles.</p>
+<h2 id="methods">Methods</h2>
+<hr />
+<h3 id="vehiclemanagercreatevehiclemodel-x-y-z-angle-snaptoground"><code>VehicleManager.CreateVehicle(model, x, y, z, angle, snapToGround)</code></h3>
+<p>Requests a vehicle to be created.</p>
+<h4 id="parameters">Parameters</h4>
+<p><code>model</code>
+: (number) The ID of the vehicle model.</p>
+<p><code>x</code>
+: (number) X coordinate.</p>
+<p><code>y</code>
+: (number) Y coordinate.</p>
+<p><code>z</code>
+: (number) Z coordinate.</p>
+<p><code>angle</code>
+: (number) Yaw in radians.</p>
+<p><code>snapToGround</code>
+: (bool) Whether to snap the car to the ground.</p>
+<h4 id="returns">Returns</h4>
+<p><code>vehicleRequest</code>
+: (VehicleRequest) An instance of the vehicle request to keep track of its creation.</p>
+<hr />
+<h3 id="vehiclemanagerdestroyvehiclevehiclerequest"><code>VehicleManager.DestroyVehicle(vehicleRequest)</code></h3>
+<p>Destroys a vehicle or cancels a vehicle request.</p>
+<h4 id="parameters_1">Parameters</h4>
+<p><code>vehicleRequest</code>
+: (VehicleRequest) The request, as returned by CreateVehicle, to cancel (or to delete, if the vehicle has been spawned)</p>
+<h2 id="vehicle-spawn-states">Vehicle Spawn States</h2>
+<h3 id="vehiclemanagerprocessing"><code>VehicleManager.Processing</code></h3>
+<p>Vehicle is still being loaded, hasn't been spawned yet.</p>
+<h3 id="vehiclemanagerfailed"><code>VehicleManager.Failed</code></h3>
+<p>Vehicle failed to spawn.</p>
+<h3 id="vehiclemanagerspawned"><code>VehicleManager.Spawned</code></h3>
+<p>Vehicle spawned successfully.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../CharacterManager/" class="btn btn-neutral float-left" title="CharacterManager"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../UI/" class="btn btn-neutral float-right" title="UI">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../CharacterManager/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../UI/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
