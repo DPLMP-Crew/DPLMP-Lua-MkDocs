@@ -6,5 +6,8 @@ nav:
     - Index: client/index.md
     - Classes: 
       - Character: client/Classes/Character.md
+    - Libraries:
+      - Core: client/Libraries/Core.md
+      - CharacterManager: client/Libraries/CharacterManager.md
       
 theme: readthedocs
