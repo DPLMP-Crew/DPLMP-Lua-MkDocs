@@ -36,5 +36,5 @@ Aborts a coroutine by its Id, immediately stopping its execution.
 
 ---
 
-### `DeltaTime`
+### `Core.DeltaTime`
 (number) The time elapsed between this frame and the last.
